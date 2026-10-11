@@ -1,0 +1,316 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 24px;
+    background: #f7f9f6;
+    color: #182320;
+    font-family: "Inter", Arial, sans-serif;
+}
+
+h1, h2, h3, p {
+    margin: 0;
+}
+
+h1 {
+    max-width: 1392px;
+    margin: 0 auto 20px;
+    color: #000000;
+    font-family: Arial, sans-serif;
+    font-size: 64px;
+    line-height: 1.1;
+}
+
+.panels {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+    max-width: 1392px;
+    margin: 0 auto;
+}
+
+.panel {
+    flex: 0 1 447px;
+    min-width: 0;
+    min-height: 729px;
+    padding: 24px;
+    border: 1px solid #dce3dd;
+    border-radius: 12px;
+    background: #ffffff;
+}
+
+.panel_header {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    min-height: 63px;
+    border-bottom: 1px solid #dce3dd;
+}
+
+.badge {
+    display: grid;
+    flex-shrink: 0;
+    place-items: center;
+    width: 37px;
+    height: 37px;
+    border-radius: 4px;
+    background: #000000;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.noise_02 .badge {
+    background: #7f668d;
+}
+
+h2 {
+    font-size: 22px;
+    line-height: 26px;
+}
+
+.description {
+    margin-top: 8px;
+    color: #68736e;
+    font-size: 10px;
+    line-height: 13px;
+}
+
+.status {
+    width: 8px;
+    height: 8px;
+    margin: 15px 12px 0 auto;
+    border-radius: 50%;
+    background: #000000;
+    flex-shrink: 0;
+}
+
+.noise_02 .status {
+    background: #7f668d;
+}
+
+h3 {
+    color: #68736e;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 14px;
+}
+
+.envelope {
+    padding-top: 17px;
+}
+
+.envelope h3 {
+    margin-bottom: 21px;
+}
+
+.slider {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 18px 28px;
+    row-gap: 9px;
+    height: 66px;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+output {
+    font-variant-numeric: tabular-nums;
+}
+
+.slider output {
+    color: #000000;
+    font-size: 13px;
+}
+
+.noise_02 .slider output {
+    color: #7f668d;
+}
+
+.slider input {
+    appearance: none;
+    -webkit-appearance: none;
+    grid-column: 1 / -1;
+    width: 100%;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #000000;
+    cursor: pointer;
+}
+
+.noise_02 .slider input {
+    color: #7f668d;
+}
+
+.slider input::-webkit-slider-runnable-track {
+    height: 0.45vh;
+    border-radius: 3px;
+    background: linear-gradient(to right, currentColor var(--fill), #e6ebe6 var(--fill));
+}
+
+.slider input::-webkit-slider-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 1vw;
+    height: 2.1vh;
+    margin-top: -0.825vh;
+    border: 1px solid currentColor;
+    border-radius: 3px;
+    background: #ffffff;
+}
+
+.slider::after {
+    content: "";
+    position: absolute;
+    left: 0.5vw;
+    right: 0.5vw;
+    bottom: 15px;
+    height: 3px;
+    border-right: 1px solid #c7d0c8;
+    background: repeating-linear-gradient(to right, #c7d0c8 0 1px, transparent 1px 25%);
+    pointer-events: none;
+}
+
+.waveform h3 {
+    margin-bottom: 20px;
+}
+
+.wave_buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 16px;
+}
+
+.wave_buttons button {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    height: 46px;
+    padding: 0 12px;
+    border: 1px solid #dce3dd;
+    border-radius: 6px;
+    background: #ffffff;
+    color: #68736e;
+    font: inherit;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.wave_buttons button.active {
+    border-color: #000000;
+    background: #000000;
+    color: #ffffff;
+}
+
+.noise_02 .wave_buttons button.active {
+    border-color: #7f668d;
+    background: #7f668d;
+}
+
+.wave_icon {
+    display: block;
+    flex: 0 0 40px;
+    height: 28px;
+    object-fit: contain;
+}
+
+.wave_buttons button.active .wave_icon {
+    filter: brightness(0) invert(1);
+}
+
+.effects {
+    margin-top: 20px;
+    padding-top: 17px;
+    border-top: 1px solid #dce3dd;
+}
+
+.effect_controls {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-top: 10px;
+}
+
+.effect {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.effect output {
+    margin-top: 13px;
+    color: #68736e;
+}
+
+.dial {
+    --arc: 0deg;
+    --angle: -135deg;
+    position: relative;
+    display: block;
+    color: #000000;
+    width: 74px;
+    height: 74px;
+    margin-top: 14px;
+    border-radius: 50%;
+    background:
+        radial-gradient(circle, currentColor 0 3px, transparent 3.2px),
+        radial-gradient(circle, #f7f9f6 0 30px, #dce3dd 30px 31px, #ffffff 31px 33px, transparent 33px),
+        conic-gradient(from 225deg, currentColor 0deg var(--arc), #dfe5df var(--arc) 270deg, transparent 270deg);
+}
+
+.noise_02 .dial {
+    color: #7f668d;
+}
+
+.dial::after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 35.5px;
+    width: 3px;
+    height: 8px;
+    border-radius: 2px;
+    background: currentColor;
+    transform: rotate(var(--angle));
+    transform-origin: 50% 25px;
+    pointer-events: none;
+}
+
+.dial input {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    opacity: 0;
+    touch-action: none;
+    cursor: grab;
+}
+
+.dial input:active {
+    cursor: grabbing;
+}
+
+button:focus-visible,
+.slider input:focus-visible,
+.dial:focus-within {
+    outline: 2px solid #000000;
+    outline-offset: 4px;
+}
+
+.noise_02 button:focus-visible,
+.noise_02 .slider input:focus-visible,
+.noise_02 .dial:focus-within {
+    outline-color: #7f668d;
+}

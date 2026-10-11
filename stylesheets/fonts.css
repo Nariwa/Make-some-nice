@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'Arial_Bold';
+  src: url('../fonts/arial_bolditalicmt.ttf') format(truetype);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Arial_Classic';
+  src: url('../fonts/arialmt.ttf') format(truetype);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Inter_Italic';
+  src: url('../fonts/Inter-Italic-VariableFont_opsz\,wght.ttf') format(truetype);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/Inter-VariableFont_opsz\,wght.ttf') format(truetype);
+  font-weight: 400;
+}
